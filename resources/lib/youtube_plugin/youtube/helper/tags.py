@@ -37,7 +37,7 @@ def create_channel(channel_id, title, item_uri, image, kind):
     #init()
     cur = db.cursor()
     cur.execute("begin")
-    cur.execute("INSERT OR REPLACE INTO channels(channel,title,uri,image,kind) VALUES (?,?,?,?,?,?,?);",(channel_id, title, item_uri, image, kind))
+    cur.execute("INSERT OR REPLACE INTO channels(channel,title,uri,image,kind) VALUES (?,?,?,?,?);",(channel_id, title, item_uri, image, kind))
     db.commit()
     cur.close()
 
